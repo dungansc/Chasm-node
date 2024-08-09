@@ -25,31 +25,26 @@
 | **Disk Space**         | 50GB SSD                 |
 | **IP Address**         | Static IP                |
 
-
----
 ---
 ### Installation
 
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
--Install Docker
+### Install Docker
 ```bash
 sudo apt install apt-transport-https ca-certificates curl software-properties-common -y && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - && sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable" && sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 ```
-```bash
-sudo apt-get update
-```
-- Create folder
+### Create folder
 ```bash
 mkdir chasm
 cd chasm
 ```
-- Setup environment
+### Setup environment
 ```bash
 nano .env
 ```
-- Copy this format and paste the required value there, you copied earlier from different websites
+### Copy this format and paste the required value there, you copied earlier from different websites
 ```bash
 PORT=3001
 LOGGER_LEVEL=debug
@@ -72,7 +67,7 @@ GROQ_API_KEY=your_Groq_API_Key
 ```bash
 ufw allow 3001
 ```
-- Start and run Node with Docker
+### Start and run Node with Docker
 ```bash
 docker pull johnsonchasm/chasm-scout
 docker run -d --restart=always --env-file ./.env -p 3001:3001 --name scout johnsonchasm/chasm-scout
@@ -80,7 +75,7 @@ docker run -d --restart=always --env-file ./.env -p 3001:3001 --name scout johns
 ```bash
 docker logs scout
 ```
-- Check if your node is running successfully
+### Check if your node is running successfully
 ```bash
 curl localhost:3001
 ```
