@@ -2,8 +2,6 @@
 - Twitter : [@ChasmNetwork](https://x.com/ChasmNetwork)
 - Website : [Visit](https://chasm.net)
 
-## Node Info
-
 ### Min Requirements
 
 | **Requirement**        | **Details**              |
