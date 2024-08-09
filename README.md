@@ -3,7 +3,6 @@
 - Website : [Visit](https://chasm.net)
 
 ### Min Requirements
-
 | **Requirement**        | **Details**              |
 |------------------------|--------------------------|
 | **Operating System**   | Linux (linux/amd64, linux/arm64) |
@@ -12,9 +11,7 @@
 | **Disk Space**         | 20GB                     |
 | **IP Address**         | Static IP                |
 
-
 ### Recommended Server Requirements
-
 | **Requirement**        | **Details**              |
 |------------------------|--------------------------|
 | **Operating System**   | Ubuntu (20.04 LTS onwards) |
@@ -80,6 +77,5 @@ curl localhost:3001
 - Done !!
 ---
 ### Node Status
-
 - Check your scout status here : [Visit](https://scout.chasm.net/dashboard)
 - If you see Yellow or Green, it means your node is working properly, also your yellow dot will be turned into green dot after 1 or 2 hrs
