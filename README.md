@@ -26,7 +26,7 @@
 | **IP Address**         | Static IP                |
 
 ---
-### Installation
+### Update and install packages
 
 ```bash
 sudo apt update && sudo apt upgrade -y
