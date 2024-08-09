@@ -1,17 +1,56 @@
-# Chasm-node
-Chasm - Installation Node
+### Project Information
+- Twitter : [@ChasmNetwork](https://x.com/ChasmNetwork)
+- Website : [Visit](https://chasm.net)
 
--Update and install packages
+## Node Info
+
+### Min Requirements
+
+| **Requirement**        | **Details**              |
+|------------------------|--------------------------|
+| **Operating System**   | Linux (linux/amd64, linux/arm64) |
+| **vCPU**               | 1                        |
+| **RAM**                | 1GB                       |
+| **Disk Space**         | 20GB                     |
+| **IP Address**         | Static IP                |
+
+
+### Recommended Server Requirements
+
+| **Requirement**        | **Details**              |
+|------------------------|--------------------------|
+| **Operating System**   | Ubuntu (20.04 LTS onwards) |
+| **vCPU**               | 2                        |
+| **RAM**                | 4GB                      |
+| **Disk Space**         | 50GB SSD                 |
+| **IP Address**         | Static IP                |
+
+
+---
+---
+### Installation
+
+```bash
 sudo apt update && sudo apt upgrade -y
+```
 -Install Docker
+```bash
 sudo apt install apt-transport-https ca-certificates curl software-properties-common -y && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - && sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable" && sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
--Create Folder
+```
+```bash
+sudo apt-get update
+```
+- Create folder
+```bash
 mkdir chasm
 cd chasm
--Setup Environment
+```
+- Setup environment
+```bash
 nano .env
-Paste the command below into the .env file
-
+```
+- Copy this format and paste the required value there, you copied earlier from different websites
+```bash
 PORT=3001
 LOGGER_LEVEL=debug
 
@@ -28,14 +67,26 @@ WEBHOOK_URL=http://your_VPS_ip:3001/
 PROVIDERS=groq
 MODEL=gemma2-9b-it
 GROQ_API_KEY=your_Groq_API_Key
-
-# Optional
-OPENROUTER_API_KEY=
-OPENAI_API_KEY=
-Start and run Node with Docker
+```
+- Save this file using `Ctrl + X` then `Y` and then press `Enter`
+```bash
+ufw allow 3001
+```
+- Start and run Node with Docker
+```bash
 docker pull johnsonchasm/chasm-scout
 docker run -d --restart=always --env-file ./.env -p 3001:3001 --name scout johnsonchasm/chasm-scout
-Check if your node is running successfully
+```
+```bash
+docker logs scout
+```
+- Check if your node is running successfully
+```bash
 curl localhost:3001
-if it runs successfully the output is “OK”
-Check your Scouts Here
+```
+- Done !!
+---
+### Node Status
+
+- Check your scout status here : [Visit](https://scout.chasm.net/dashboard)
+- If you see Yellow or Green, it means your node is working properly, also your yellow dot will be turned into green dot after 1 or 2 hrs
